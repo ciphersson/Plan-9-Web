@@ -1,0 +1,20 @@
+{
+  "name": "plan9-web",
+  "version": "1.0.0",
+  "description": "A Plan 9-inspired web interface",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --port=9999 --no-browser",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "plan9",
+    "rio",
+    "window-manager"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

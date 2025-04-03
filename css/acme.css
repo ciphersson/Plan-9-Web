@@ -1,0 +1,191 @@
+/* Acme color scheme */
+:root {
+    --acme-bg: #FFFFEA;
+    --acme-toolbar: #EAFFFF;
+    --acme-toolbar-active: #9EEFFF;
+    --acme-text: #000000;
+    --acme-border: #999999;
+    --acme-scrollbar: #999999;
+    --acme-grip: #444444;
+}
+
+.acme {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--acme-bg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.acme-toolbar {
+    background: var(--acme-toolbar);
+    padding: 2px 5px;
+    border-bottom: 1px solid var(--acme-border);
+    user-select: none;
+}
+
+.acme-columns {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.acme-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    border-right: 1px solid var(--acme-border);
+    position: relative;
+}
+
+.acme-column:last-child {
+    border-right: none;
+}
+
+.column-toolbar {
+    background: var(--acme-toolbar);
+    padding: 2px 5px;
+    border-bottom: 1px solid var(--acme-border);
+    user-select: none;
+}
+
+.column-content {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.acme-window {
+    position: absolute;
+    background: var(--acme-bg);
+    border: 1px solid var(--acme-border);
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    min-height: 100px;
+    resize: both;
+    overflow: hidden;
+}
+
+.window-toolbar {
+    background: var(--acme-toolbar);
+    padding: 2px 5px;
+    border-bottom: 1px solid var(--acme-border);
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.window-content {
+    flex: 1;
+    padding: 5px;
+    overflow: auto;
+    white-space: pre-wrap;
+    font-family: monospace;
+    position: relative;
+    background: var(--acme-bg);
+}
+
+.line-numbers {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background: var(--acme-toolbar);
+    border-right: 1px solid var(--acme-border);
+    user-select: none;
+    font-family: monospace;
+    padding: 5px 2px;
+    text-align: right;
+}
+
+.line-number {
+    color: #666;
+    font-size: 12px;
+    padding-right: 5px;
+}
+
+.window-content {
+    margin-left: 40px; /* Match line-numbers width */
+}
+
+.acme-scrollbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 15px;
+    background: var(--acme-toolbar);
+    border-left: 1px solid var(--acme-border);
+    cursor: pointer;
+}
+
+.grip {
+    width: 10px;
+    height: 10px;
+    background: var(--acme-grip);
+    cursor: move;
+    margin-right: 5px;
+}
+
+.command {
+    padding: 0 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.command:hover {
+    background: var(--acme-toolbar-active);
+}
+
+.filename {
+    margin: 0 5px;
+    padding: 0 2px;
+    border: none;
+    background: transparent;
+    font-family: monospace;
+}
+
+/* Search highlight */
+.search-highlight {
+    background: #FFFF00;
+}
+
+.search-highlight.active {
+    background: #FFA500;
+}
+
+/* Unsaved changes indicator */
+.unsaved .filename {
+    font-style: italic;
+}
+
+.unsaved .filename::after {
+    content: '*';
+    color: var(--acme-border);
+}
+
+/* Selection styles */
+::selection {
+    background: #000;
+    color: #fff;
+}
+
+/* Drag handle */
+.resize-handle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    cursor: col-resize;
+    background: transparent;
+}
+
+.resize-handle:hover {
+    background: var(--acme-border);
+}

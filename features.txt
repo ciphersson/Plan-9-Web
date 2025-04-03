@@ -1,0 +1,173 @@
+Plan 9 Web Interface - Detailed Feature Guide
+==========================================
+
+Table of Contents:
+1. Getting Started
+2. Window Management
+3. Acme Editor
+4. Mouse Operations
+5. Text Commands
+6. Plumbing System
+7. Window Layouts
+8. Bookmarks
+9. Tips and Tricks
+
+1. Getting Started
+-----------------
+- Install Node.js and npm
+- Run 'npm install' to install dependencies
+- Start server with 'npm start'
+- Open browser to displayed localhost URL
+- Use a three-button mouse for best experience
+
+2. Window Management
+-------------------
+Basic Controls:
+- New Window: Creates a basic window
+- New Acme: Creates an Acme editor instance
+- Taskbar shows all open windows
+- Clock displays in system status area
+
+Window Operations:
+- Drag title bar to move
+- Drag corners to resize
+- Click title bar to activate
+- Close button (×) to exit
+
+3. Acme Editor
+-------------
+Main Components:
+- Top toolbar (blue): Global commands
+- Column toolbar: Column-specific commands
+- Window toolbar: Window-specific commands
+- Text area (yellow): Editing space
+- Scrollbar: Navigation
+- Line numbers: Left margin
+
+Toolbar Commands:
+a) Top Toolbar:
+   - New: Create new window
+   - Newcol: Create new column
+   - Exit: Close Acme
+   - Dump: Save current state
+   - Load: Restore saved state
+   - Putall: Save all modified files
+   - Tile/Stack/Cascade: Window layouts
+
+b) Column Toolbar:
+   - New: New window in column
+   - Delcol: Delete column
+   - Cut/Paste/Snarf: Text operations
+   - Sort: Sort windows
+   - Zerox: Clone window
+
+c) Window Toolbar:
+   - Del: Close window
+   - Get: Load file
+   - Put: Save file
+   - Look: Search
+   - Edit: Text manipulation
+   - Local: Shell commands
+
+4. Mouse Operations
+-----------------
+Mouse Chords:
+- Left+Middle: Cut text
+- Left+Right: Paste text
+- Left+Middle+Right: Copy (Snarf) text
+
+Scrollbar:
+- Left click: Scroll up
+- Right click: Scroll down
+- Middle click: Jump to position
+
+Text Selection:
+- Left click & drag: Select text
+- Double-click: Select word
+- Triple-click: Select line
+- Right-click: Plumb text
+
+5. Text Commands
+--------------
+Selection Commands:
+- indent: Add 4 spaces to line start
+- outdent: Remove 4 spaces from line start
+- comment: Add // to line start
+- uncomment: Remove // from line start
+- sort: Sort selected lines
+- rot13: Basic text encryption
+
+Edit Command:
+Format: Edit <command>
+Examples:
+- Edit s/old/new/     # Replace text
+- Edit ,d             # Delete all
+- Edit #0,#100d      # Delete lines 0-100
+
+6. Plumbing System
+----------------
+Right-click Detection:
+- URLs: Opens in new browser tab
+- File paths: Opens in Acme
+- Line numbers: Opens file at line
+- Directories: Shows contents
+
+File Path Formats:
+- Simple: file.txt
+- With line: file.txt:123
+- Directories: dir/
+- URLs: http://example.com
+
+7. Window Layouts
+---------------
+Layout Commands:
+- Tile: Grid arrangement
+- Stack: Overlapped with offset
+- Cascade: Diagonal arrangement
+
+Customization:
+- Drag windows freely
+- Resize as needed
+- Persistent layouts (via Dump/Load)
+
+8. Bookmarks
+-----------
+Usage:
+- Double-click text to bookmark
+- Bookmarks persist across sessions
+- Restored on Acme restart
+- Stores file, line, and position
+
+9. Tips and Tricks
+----------------
+Efficiency:
+- Use mouse chords for fast editing
+- Middle-click commands instead of menus
+- Right-click to navigate files
+- Double-click for quick bookmarks
+
+State Management:
+- Use Dump to save layout
+- Load restores previous state
+- Putall saves all changes
+- Exit closes cleanly
+
+Text Navigation:
+- Use line numbers for reference
+- Scrollbar for quick movement
+- Look command for searching
+- Edit command for bulk changes
+
+Best Practices:
+- Save often (Put command)
+- Use columns for organization
+- Bookmark important locations
+- Utilize plumbing for navigation
+
+Keyboard Shortcuts:
+- Tab: Indent
+- Shift+Tab: Outdent
+- Ctrl+S: Alternative to Put
+- Ctrl+F: Alternative to Look
+
+Note: This implementation aims to be faithful to the original Plan 9 Acme editor while adding modern conveniences. Some features may work slightly differently than the original due to web browser limitations.
