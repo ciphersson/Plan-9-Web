@@ -1,6 +1,6 @@
 # Plan 9 Web Interface with Acme Editor
 
-
+![Image](https://github.com/user-attachments/assets/86c7520e-b08f-4a45-9c35-d925e03e0e3c)
 
 
 ## Download zip, open, click index.html and run it. 
