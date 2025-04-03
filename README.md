@@ -1,6 +1,6 @@
 # Plan 9 Web Interface with Acme Editor
 
-![Plan9 Web](image-url) https://github.com/ciphhersson/Plan-9-Web/blob/main/glendaNode.JPG
+![Plan9 Web]([image-url](https://github.com/ciphhersson/Plan-9-Web/blob/main/glendaNode.JPG)) 
 
 
 ## Download zip, open, click index.html and run it. 
