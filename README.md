@@ -1,6 +1,8 @@
 # Plan 9 Web Interface with Acme Editor
 
-![Node Bunny](./assets/node-bunny.png)
+## Download zip, open, click index.html and run it. 
+
+## OR... 
 
 A modern web-based implementation of the Plan 9 desktop environment, featuring a faithful recreation of the Acme text editor.
 
